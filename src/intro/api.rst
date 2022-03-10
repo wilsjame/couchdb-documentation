@@ -426,7 +426,7 @@ If you see this, add the latest revision number of your document to the JSON
 structure::
 
     curl -X PUT http://admin:password@127.0.0.1:5984/albums/6e1295ed6c29495e54cc05947f18c8af \
-         -d '{"_rev":"1-2902191555","title":"There is Nothing Left to Lose","artist":"Foo Fighters","year":"1997"}'
+         -d '{"_rev":"1-2902191555","title":"There is Nothing Left to Lose","artist":"Foo Fighters","year":"1999"}'
 
 Now you see why it was handy that CouchDB returned that ``_rev`` when we made
 the initial request. CouchDB replies:
@@ -704,7 +704,7 @@ operations::
 
     curl -vX POST http://admin:password@127.0.0.1:5984/_replicate \
          -d '{"source":"http://example.org:5984/albums","target":"http://example.org:5984/albums-replica"}' \
-         -H"Content-Type: application/json"
+         -H "Content-Type: application/json"
 
 .. note::
     **CouchDB and REST**
